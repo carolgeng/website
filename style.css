@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;600&display=swap');
 
 html, body {
+    cursor: url(plusheen.png), pointer;
     height: 100%;
     overflow: auto;
-    cursor: url('asdf.jpg'),auto;
 }
 
 header {
@@ -16,7 +16,6 @@ body {
     background-image: linear-gradient(rgb(194, 135, 187), rgb(125, 161, 183));
     font-family: Inconsolata;
     overflow: auto;
-    cursor: url('asdf.jpg'),auto;
 }
 
 .name {
@@ -85,6 +84,7 @@ li {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 10%;
   }
 #copyright {
     text-align: center;
@@ -109,19 +109,21 @@ li {
 }
 
 ul{
-    text-align: center;
+    text-align: justify;
 	list-style-type: none;
   	margin: 0;
-  	padding-top: 75px;
-  	padding-left: 250px;
-	padding-right: 250px;
+  	padding-top: 5%;
+  	padding-left: 15%;
+	padding-right: 15%;
   	font-size: 20px;
 	font-weight: bold;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-
+a:hover {
+    cursor: url(plusheen2.png), pointer;
+}
 
 /* CSS */
 .button-89 {
@@ -152,6 +154,7 @@ ul{
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
+  cursor: url(plusheen2.png), pointer;
 }
 
 .button-89:active {
@@ -161,7 +164,7 @@ ul{
 /* container */
 .section {
     border-radius: 25px;
-    max-width: 900px;
+    width: 60%;
     margin: auto;
     background-color: #f5f5f3;
     padding: 0.5rem 2rem 1rem 2rem;
