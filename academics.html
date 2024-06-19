@@ -41,49 +41,42 @@
 
     <ul1 class="flex-container">
         <div class="section1">
-            <h2 class="left">Fall 2021</h2>
-            <div class="course">
-                <div class="course-code">ENGR 102</div>
-                <div class="course-name">Engineering Lab I - Computation (Honors)</div>
-            </div>
-            <div class="course">
-                <div class="course-code">MATH 251</div>
-                <div class="course-name">Engineering Mathematics III</div>
-            </div>
-            <div class="course">
-                <div class="course-code">PHYS 206</div>
-                <div class="course-name">Newtonian Mechanics for Engineering and Science</div>
-            </div>
-            <div class="course">
-                <div class="course-code">PHIL 111</div>
-                <div class="course-name">Contemporary Moral Issues</div>
-            </div>
-            <div class="course">
-                <div class="course-code">ENDS 101</div>
-                <div class="course-name">Design Process (Honors)</div>
-            </div>
-            <div class="course">
-                <div class="course-code">UGST 181</div>
-                <div class="course-name">Honors Family Meeting</div>
+            <h2>Fall 2021</h2>
+            <div id="fall2021">
+                <!-- generated -->
             </div>
         </div>
         <div class="section1">
             <h2>Spring 2022</h2>
-            
+            <div id="spring2022">
+                <!-- generated -->
+            </div>
         </div>
         <div class="section1">
             <h2>Fall 2022</h2>
-            <p>This is the content of section 3. It contains further explanations and examples.</p>
+            <div id="fall2022">
+                <!-- generated -->
+            </div>
         </div>
         <div class="section1">
             <h2>Spring 2023</h2>
-            <p>This is the content of section 4. It wraps up the discussion and offers concluding remarks.</p>
+            <div id="spring2023">
+                <!-- generated -->
+            </div>
+        </div>
+        <div class="section1">
+            <h2>Fall 2023</h2>
+            <div id="fall2023">
+                <!-- generated -->
+            </div>
+        </div>
+        <div class="section1">
+            <h2>Spring 2024</h2>
+            <div id="spring2024">
+                <!-- generated -->
+            </div>
         </div>
     </ul1>
-
-
-
-
 
 
 
@@ -96,6 +89,93 @@
         </h1>
         <h1 id="copyright"> Made with ❤ by Carol Geng </h1>
     </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fall2021Courses = [
+                { code: 'ENDS 101', name: 'Design Process (Honors)' },
+                { code: 'ENGR 102', name: 'Engineering Lab I - Computation (Honors)' },
+                { code: 'PHIL 111', name: 'Contemporary Moral Issues' },
+                { code: 'PHYS 206', name: 'Newtonian Mechanics for Engineering and Science' },
+                { code: 'MATH 251', name: 'Engineering Mathematics III' },
+                { code: 'UGST 181', name: 'Honors Family Meeting' }
+            ];
+
+            const spring2022Courses = [
+                { code: 'CSCE 121', name: 'Introduction to Program Design and Concepts' },
+                { code: 'ENGR 216', name: 'Experimental Physics and Engineering Lab II - Mechanics (Honors)' },
+                { code: 'MATH 308', name: 'Differential Equations' },
+                { code: 'POLS 207', name: 'State and Local Government' },
+                { code: 'ENGR 291', name: 'Research (Honors)' },
+                { code: 'ENGR 181', name: 'Engineering Honors Seminar I' },
+                { code: 'UGST 181', name: 'Honors Family Meeting' }
+            ];
+
+            const fall2022Courses = [
+                { code: 'CSCE 221', name: 'Data Structures & Algorithms' },
+                { code: 'CSCE 222', name: 'Discrete Structures in Computing' },
+                { code: 'MATH 311', name: 'Topics in Applied Mathematics I' },
+                { code: 'STAT 211', name: 'Principles of Statistics I' },
+                { code: 'ENGR 491', name: 'Research (Honors)' }
+            ];
+
+            const spring2023Courses = [
+                { code: 'ARTS 103', name: 'Design I' },
+                { code: 'ARTS 104', name: 'Introduction to Graphic Design' },
+                { code: 'CSCE 181', name: 'Introduction to Computing' },
+                { code: 'CSCE 310', name: 'Database Systems' },
+                { code: 'CSCE 312', name: 'Computer Organization (Honors)' },
+                { code: 'CSCE 314', name: 'Programming Languages' },
+                { code: 'CSCE 441', name: 'Computer Graphics (Honors)' }
+            ];
+
+            const fall2023Courses = [
+                { code: 'CSCE 313', name: 'Introduction to Computer Systems' },
+                { code: 'CSCE 315', name: 'Programming Studio (Honors)' },
+                { code: 'CSCE 481', name: 'Seminar' },
+                { code: 'FILM 489', name: 'Special Topics: Story for the Screen' },
+                { code: 'CSCE 629', name: 'Analysis of Algorithms' },
+                { code: 'CSCE 399', name: 'High-Impact Experience' }
+            ];
+
+            const spring2024Courses = [
+                { code: 'ENGR 301', name: 'College of Engineering Study Abroad' },
+            
+            ];
+
+
+            function generateCoursesHTML(data) {
+                return data.map(course => `
+                    <div class="course">
+                        <div class="course-code">${course.code}</div>
+                        <div class="course-name">${course.name}</div>
+                    </div>
+                `).join('');
+            }
+
+            //generate courses 
+            const fall2021 = document.getElementById('fall2021');
+            fall2021.innerHTML = generateCoursesHTML(fall2021Courses);
+
+            const spring2022 = document.getElementById('spring2022');
+            spring2022.innerHTML = generateCoursesHTML(spring2022Courses);
+
+            const fall2022 = document.getElementById('fall2022');
+            fall2022.innerHTML = generateCoursesHTML(fall2022Courses);
+
+            const spring2023 = document.getElementById('spring2023');
+            spring2023.innerHTML = generateCoursesHTML(spring2023Courses);
+
+            const fall2023Section = document.getElementById('fall2023');
+            fall2023.innerHTML = generateCoursesHTML(fall2023Courses);
+
+            const spring2024 = document.getElementById('spring2024');
+            spring2024.innerHTML = generateCoursesHTML(spring2024Courses);
+        });
+    </script>
+
 </body>
 
 </html>

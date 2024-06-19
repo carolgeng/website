@@ -5,7 +5,8 @@ body {
     cursor: url(plusheen.png), pointer;
     height: 100%;
     font-family: Inconsolata;
-    overflow: auto;
+    overflow: none;
+    
 }
 
 header {
@@ -18,6 +19,7 @@ body {
     flex-direction: column;
     background-image: linear-gradient(rgb(194, 135, 187), rgb(125, 161, 183));
     font-family: Inconsolata;
+    background-attachment: fixed;
 }
 
 .name {
@@ -117,7 +119,7 @@ ul {
     text-align: justify;
     list-style-type: none;
     margin: 0;
-    padding-top: 5%;
+    padding-top: 4%;
     padding-left: 15%;
     padding-right: 15%;
     font-size: 20px;
@@ -213,7 +215,6 @@ ul1.flex-container {
     margin: 0;
     padding-left: 15%;
     padding-right: 15%;
-    font-size: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -225,15 +226,10 @@ ul1.flex-container {
     width: 45%;
     background-color: #f5f5f3;
     padding: 0.5rem 2rem 1rem 2rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
     opacity: 0.75;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    /* text-align: justify; */
-    /* align-items: center; */
-    justify-content: center;
 }
 
 .section1:hover {
@@ -258,12 +254,11 @@ ul1.flex-container {
 
 .section1 h2 {
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .course {
     display: flex;
-    
     margin-bottom: 8px; /* Adjust spacing between courses */
 }
 
